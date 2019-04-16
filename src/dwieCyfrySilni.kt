@@ -7,11 +7,15 @@ fun readValue( numbersToCheck:IntArray){// wczytuje liczby do sprawdzenia
 }
 
 fun silnia(data:Int):String{//oblicza silnie
-    var wynik:Int = 1
-    for (i in 1..data){
-        wynik = wynik * i
+    if (data<10) {
+        var wynik: Int = 1
+        for (i in 1..data) {
+            wynik = wynik * i
+        }
+        return wynik.toString()
+    } else {
+        return "00"
     }
-    return wynik.toString()
 }
 
 fun printTwoNumbers(number :String):String{//wyświetla liczbe dziesiątek spacja liczbe jedności
@@ -22,6 +26,7 @@ fun printTwoNumbers(number :String):String{//wyświetla liczbe dziesiątek spacj
     }
     return wynik
 }
+
 
 fun writeScore(numbersToWrite: IntArray){//wypisuje wyniki
     for (i in 0..(numbersToWrite.size-1)){
